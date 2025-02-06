@@ -1,0 +1,59 @@
+<mvc:View controllerName="app.miningapp4521.controller.MiningDetailsView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+     <!--<Button text="{toolsModel>/toolsData/0/name}"  icon="sap-icon://arrow-right" 
+		press="onPressToView2"></Button>-->
+		<headerContent>
+			<Button icon="sap-icon://sort" press="onSort"/>
+			<!-- <Button icon="sap-icon://action" tooltip="Share"/> -->
+		</headerContent>
+		<subHeader>
+			<OverflowToolbar>
+				<!--liveChange - search like google -->
+				<SearchField search="onSearch" id="idSearch" liveChange="onSearch"/>
+			</OverflowToolbar>
+		</subHeader>
+		<content>
+			<List items="{/waSet}" id="idListItem" mode="SingleSelectMaster" selectionChange="onItemPress">
+				<items>
+					<!--items has a base class sap.m.ListItemBase and sap.m.ListItemBase
+			has a subclass DisplayListItem, InputListItem, StandardListItem,FeedListItem,  -->
+					<ObjectListItem intro="{LocationId}" number="{DrillCount}"
+						
+                        numberUnit="{CostCenter}" title="{MineralType}">
+                        <!-- numberState="{=${toolsModel>status} === 'available'? 'Success' : 'Error' }"  -->
+						<!-- <attributes>
+							<ObjectAttribute title="Weight" text="{toolsModel>weight}"></ObjectAttribute>
+							<ObjectAttribute title="Price" text="10000"></ObjectAttribute>
+						</attributes> -->
+						<firstStatus>
+							<!--{=${xmlModel>smoker} === 'true'?true : false }-->
+							<!-- <ObjectStatus title="Status" text="{toolsModel>status}" state="{=${toolsModel>status} === 'available'? 'Success' : 'Error' }"></ObjectStatus> -->
+						</firstStatus>
+					</ObjectListItem>
+					<!--<DisplayListItem label="name" value="Mitre saw"></DisplayListItem>-->
+					<!--<InputListItem>-->
+					<!--content is a part of sap.ui.core.Control so we can have anything in content 
+					that belongs to sap.ui.core.Control -->
+					<!--	<content>-->
+					<!--		<Label text="description"></Label>-->
+					<!--		<Input value="Good for cutting"></Input>-->
+					<!--	</content>-->
+					<!--</InputListItem>-->
+					<!--<StandardListItem icon="https://m.media-amazon.com/images/I/81G2+dqrB9L.jpg" description="for smooth cut" info="for straight cuts"-->
+					<!--	title="mitre saw"></StandardListItem>-->
+					<!--<FeedListItem icon="https://images.indianexpress.com/2023/09/Vicky-Kaushal-2.jpg" info="Nice movie" sender="Vicky" text="Chaava"></FeedListItem>-->
+				</items>
+			</List>
+		</content>
+		<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button text="Add Details" press="onAddDetails"/>
+				<!-- <Button text="Reject" type="Reject"/>  -->
+			</OverflowToolbar>
+		</footer>
+    
+    </Page>
+</mvc:View>

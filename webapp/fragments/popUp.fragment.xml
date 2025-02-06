@@ -1,0 +1,47 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	
+	<!--sap.ui.core for FragmentDefintion-->
+	<!--Dialog is from sap.m library-->
+	<Dialog id="myDialog" title="Post Data">
+        <content>
+            <VBox>
+                <Label text="{i18n>LocationId}"/>
+                <Input value="{LocationId}" id="LocationIdInput"/>
+
+                <Label text="{i18n>DrillDate}"/>
+                <!-- <Input value="{DrillDate}" id="DrillDateInput"/> -->
+                <DatePicker value="{toolsModel>DrillDate}" id="DrillDateInput" displayFormat="dd.MM.yyyy" 
+                valueFormat="yyyy-MM-dd" />
+
+                <Label text="{i18n>LocationDesc}"/>
+                <Input value="{LocationDesc}" id="LocationDescInput"/>
+
+                <Label text="{i18n>MiningResourceAllocated}"/>
+                <Input value="{MiningResourceAllocated}" id="MiningResourceAllocatedInput"/>
+
+                <Label text="{i18n>TotalCost}"/>
+                <Input value="{TotalCost}" id="TotalCostInput"/>
+
+                <Label text="{i18n>ReportOfPossibleMinerals}"/>
+                <Input value="{ReportOfPossibleMinerals}" id="ReportOfPossibleMineralsInput"/>
+
+                <Label text="{i18n>DrillCount}"/>
+                <Input value="{DrillCount}" id="DrillCountInput"/>
+
+                <Label text="{i18n>MineralType}"/>
+                <Input value="{MineralType}" id="MineralTypeInput"/>
+
+                <Label text="{i18n>MaterialId}"/>
+                <Input value="{MaterialId}" id="MaterialIdInput"/>
+
+                <Label text="{i18n>CostCenter}"/>
+                <Input value="{CostCenter}" id="CostCenterInput"/>
+            </VBox>
+        </content>
+
+        <endButton>
+            <Button text="{i18n>Submit}" press="onSubmitData"/>
+        </endButton>
+    </Dialog>
+	
+</core:FragmentDefinition>

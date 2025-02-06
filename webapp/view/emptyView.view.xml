@@ -1,0 +1,8 @@
+<mvc:View controllerName="app.miningapp4521.controller.emptyView"
+    displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+   <Page id="idEmp" title="{i18n>emp}">
+    
+   </Page>
+</mvc:View>

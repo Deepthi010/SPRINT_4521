@@ -1,0 +1,57 @@
+<mvc:View controllerName="app.miningapp4521.controller.detailView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form">
+    <Page id="idDet" title="{i18n>Detail}">
+    <content>			
+			<ObjectHeader 
+			intro="{/LocationId}" 
+			number="{DrillCount}" 
+			numberUnit="{CostCenter}"
+			title="{MineralType}">
+            </ObjectHeader>
+		</content>
+		<IconTabBar>
+			<items>
+				<IconTabFilter icon="sap-icon://information">
+					<content>
+						<f:SimpleForm>
+                                <Label text="{i18n>LocationId}"/>
+                                <Text text="{LocationId}"/>
+
+                                <Label text="{i18n>DrillDate}"/>
+                                <Text text="{DrillDate}"/>
+
+                                <Label text="{i18n>LocationDesc}"/>
+                                <Text text="{LocationDesc}"/>
+
+                                <Label text="{i18n>MiningResourceAllocated}"/>
+                                <Text text="{MiningResourceAllocated}"/>
+
+                                <Label text="{i18n>TotalCost}"/>
+                                <Text text="{TotalCost}"/>
+
+                                <Label text="{i18n>ReportOfPossibleMinerals}"/>
+                                <Text text="{ReportOfPossibleMinerals}"/>
+
+                                <Label text="{i18n>DrillCount}"/>
+                                <Text text="{DrillCount}"/>
+
+                                <Label text="{i18n>MineralType}"/>
+                                <Text text="{MineralType}"/>
+
+                                <Label text="{i18n>MaterialId}"/>
+                                <Text text="{MaterialId}"/>
+
+                                <Label text="{i18n>CostCenter}"/>
+                                <Text text="{CostCenter}"/>
+
+						</f:SimpleForm>
+					</content>
+				</IconTabFilter>
+				
+			</items>
+		</IconTabBar>
+	</Page>
+    
+</mvc:View>
