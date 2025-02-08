@@ -5,7 +5,7 @@
     <Page id="idDet" title="{i18n>Detail}">
     <content>			
 			<ObjectHeader 
-			intro="{/LocationId}" 
+			intro="{LocationId}" 
 			number="{DrillCount}" 
 			numberUnit="{CostCenter}"
 			title="{MineralType}">
@@ -20,7 +20,8 @@
                                 <Text text="{LocationId}"/>
 
                                 <Label text="{i18n>DrillDate}"/>
-                                <Text text="{DrillDate}"/>
+                                <Text text="{path: 'DrillDate', formatter: '.formatter.formatDate'}"/>
+                                <!-- <Text text="{= ${DrillDate} ? new Date(${DrillDate}).toDateString() : '' }"/> -->
 
                                 <Label text="{i18n>LocationDesc}"/>
                                 <Text text="{LocationDesc}"/>

@@ -1,10 +1,11 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller"
-    //"sap/ui/core/Fragment"
-], (Controller) => {
+    "sap/ui/core/mvc/Controller",
+    "app/miningapp4521/Formatter/formatter"
+], (Controller,Formatter) => {
     "use strict";
 
     return Controller.extend("app.miningapp4521.controller.detailView", {
+        formatter:Formatter,
         onInit() {
 
             // var oModel = new sap.ui.model.json.JSONModel();
@@ -56,6 +57,7 @@ sap.ui.define([
             //     }
             // }) 
         }
+        
         // ,
         // f4Help:function(oEvent){
 		// 	//this.sId is made global 

@@ -4,21 +4,21 @@
     <Page id="page" title="{i18n>title}">
      <!--<Button text="{toolsModel>/toolsData/0/name}"  icon="sap-icon://arrow-right" 
 		press="onPressToView2"></Button>-->
-		<headerContent>
-			<Button icon="sap-icon://sort" press="onSort"/>
+		<!-- <headerContent> -->
+			<!-- <Button icon="sap-icon://sort" press="onSort"/> -->
 			<!-- <Button icon="sap-icon://action" tooltip="Share"/> -->
-		</headerContent>
+		<!-- </headerContent> -->
 		<subHeader>
-			<OverflowToolbar>
+			<!-- <OverflowToolbar> -->
 				<!--liveChange - search like google -->
-				<SearchField search="onSearch" id="idSearch" liveChange="onSearch"/>
-			</OverflowToolbar>
+				<!-- <SearchField search="onSearch" id="idSearch" liveChange="onSearch"/> -->
+			<!-- </OverflowToolbar> -->
 		</subHeader>
 		<content>
 			<List items="{/waSet}" id="idListItem" mode="SingleSelectMaster" selectionChange="onItemPress">
 				<items>
 					<!--items has a base class sap.m.ListItemBase and sap.m.ListItemBase
-			has a subclass DisplayListItem, InputListItem, StandardListItem,FeedListItem,  -->
+			has a subclass DisplayListItem, InputListItem, StandardListItem,FeedListItem -->
 					<ObjectListItem intro="{LocationId}" number="{DrillCount}"
 						
                         numberUnit="{CostCenter}" title="{MineralType}">

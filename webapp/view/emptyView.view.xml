@@ -3,6 +3,17 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
    <Page id="idEmp" title="{i18n>emp}">
-    
+        <content>
+           <VBox
+                alignItems="Center"
+                justifyContent="Center"
+                fitContainer="true">
+                <Image
+                    src="https://cdn-ameko.nitrocdn.com/nebOpFyruiLywxhInjibmerwBeWNmmRK/assets/images/optimized/rev-4ac2681/www.holisticam.com.au/wp-content/uploads/2019/09/mining-industry-icon-blue.png"
+                    alt="Description of the image"
+                    width="200px"
+                    height="200px"/>
+            </VBox>
+        </content>
    </Page>
 </mvc:View>

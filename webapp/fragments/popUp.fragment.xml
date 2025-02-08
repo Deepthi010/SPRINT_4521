@@ -6,27 +6,37 @@
         <content>
             <VBox>
                 <Label text="{i18n>LocationId}"/>
-                <Input value="{LocationId}" id="LocationIdInput"/>
+                <Input value="{LocationId}" id="LocationIdInput" 
+                required="true" 
+                liveChange="onLiveChange" />
+                   
+                <!-- <Input value="{DrillDate}" id="DrillDateInput"/> -->
 
                 <Label text="{i18n>DrillDate}"/>
-                <!-- <Input value="{DrillDate}" id="DrillDateInput"/> -->
-                <DatePicker value="{toolsModel>DrillDate}" id="DrillDateInput" displayFormat="dd.MM.yyyy" 
-                valueFormat="yyyy-MM-dd" />
+                
+                 <DatePicker value="{toolsModel>DrillDate}" id="DrillDateInput" 
+                 displayFormat="dd.MM.yyyy" 
+                 valueFormat="yyyy-MM-dd" />
 
                 <Label text="{i18n>LocationDesc}"/>
                 <Input value="{LocationDesc}" id="LocationDescInput"/>
 
                 <Label text="{i18n>MiningResourceAllocated}"/>
-                <Input value="{MiningResourceAllocated}" id="MiningResourceAllocatedInput"/>
+                <Input value="{MiningResourceAllocated}" id="MiningResourceAllocatedInput" 
+                type="Number"
+                liveChange="onInput"/>
 
                 <Label text="{i18n>TotalCost}"/>
-                <Input value="{TotalCost}" id="TotalCostInput"/>
+                <Input value="{TotalCost}" id="TotalCostInput" 
+                type="Number"
+                liveChange="onInputCost"/>
 
                 <Label text="{i18n>ReportOfPossibleMinerals}"/>
                 <Input value="{ReportOfPossibleMinerals}" id="ReportOfPossibleMineralsInput"/>
 
                 <Label text="{i18n>DrillCount}"/>
-                <Input value="{DrillCount}" id="DrillCountInput"/>
+                <Input value="{DrillCount}" id="DrillCountInput" 
+                type="Number" liveChange="onCount"/>
 
                 <Label text="{i18n>MineralType}"/>
                 <Input value="{MineralType}" id="MineralTypeInput"/>
@@ -39,9 +49,16 @@
             </VBox>
         </content>
 
-        <endButton>
+            <!-- we cannot add 2 buttons in endButton because it has cardinality 0:1  -->
+        <!-- <endButton> 
             <Button text="{i18n>Submit}" press="onSubmitData"/>
-        </endButton>
+            <Button text="{i18n>Close}" press="onCloseDialog"/>
+            
+        </endButton> -->
+        <buttons>
+            <Button text="{i18n>Submit}" press="onSubmitData"/>
+            <Button text="{i18n>Close}" press="onCloseDialog"/>
+        </buttons>
     </Dialog>
 	
 </core:FragmentDefinition>
