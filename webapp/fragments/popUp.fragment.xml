@@ -9,6 +9,7 @@
                 <Input value="{LocationId}" id="LocationIdInput" 
                 required="true" 
                 liveChange="onLiveChange" />
+                <!-- <Input required="true" editable="true"></Input> -->
                    
                 <!-- <Input value="{DrillDate}" id="DrillDateInput"/> -->
 

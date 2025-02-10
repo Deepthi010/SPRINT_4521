@@ -296,9 +296,13 @@ sap.ui.define([
 
             // Limit the input to a maximum of 10 characters
 			    }    if (sValue.length > 10) {
-                sap.m.MessageToast.show("Enter upto 10 alphanumeric");
+                sap.m.MessageToast.show("Enter upto 10 alphanumeric")
                 
             }
+			if (sValue.trim() === "") {
+				sap.m.MessageToast.show("This field is required.");
+				return;
+			}
 			else{
 				oInput.setValue(sValue);
 			}
